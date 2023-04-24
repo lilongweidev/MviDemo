@@ -34,7 +34,7 @@ class WallpaperAdapter(private val verticals: ArrayList<Vertical>) :
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         //加载图片
-        verticals[position].img.let {
+        verticals[position].preview.let {
             Glide.with(holder.itemView.context).load(it).into(holder.binding.ivWallPaper)
         }
     }
